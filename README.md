@@ -29,6 +29,8 @@ Introduction a la programmation
 |Site                            | Lien                |
 |--------------------------------|---------------------|
 | .                              | https://auth0.com/  |
+| angular development            | https://www.manning.com/books/angular-development-with-typescript-second-edition  |
+
 
 
 
