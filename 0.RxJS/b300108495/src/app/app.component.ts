@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +10,10 @@ export class AppComponent implements OnInit {
   title = 'b300108495';
   ngOnInit() {
     console.log(`OnInit`);
-    const hello = Observable.create(function (observer) {
+    const hello: Observable<String> = Observable.create(function (observer) {
       observer.next('Hello');
       observer.next('World');
     });
-    const subscribe = hello.subscribe(val => console.log(val));
+    const subscribe: Subscription = hello.subscribe(val => console.log(val));
   }
 }
