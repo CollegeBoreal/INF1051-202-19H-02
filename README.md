@@ -8,9 +8,9 @@ Introduction a la programmation
 
 |No| Date   | Cours                   | Intitulé                                |  Commentaires    |
 |--|--------|:------------------------|:----------------------------------------|:-----------------|
-| 1|19-01-07|[0.Init](0.Init)         | Introduction a la programmation         |                  |
-| 2|19-01-14|[1.Scaffold](1.Scaffold) | Mon premier Echaffaudage en Play        |                  |
-| 3|19-01-21|[2.oAuth](2.oAuth)       | Mon Login                               |                  |
+| 1|19-01-07|                         | Introduction a la programmation         |                  |
+| 2|19-01-14|                         |                                         |                  |
+| 3|19-01-21|                         |                                         |                  |
 | 4|19-02-28|                         |                                         |                  |
 | 5|19-02-04|                         |                                         |                  |
 | 6|19-02-11|                         |                                         |                  |
