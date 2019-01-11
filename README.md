@@ -8,7 +8,7 @@ Introduction a la programmation
 
 |No| Date   | Cours                   | Intitulé                                |  Commentaires    |
 |--|--------|:------------------------|:----------------------------------------|:-----------------|
-| 1|19-01-07|                         | Introduction a la programmation         |                  |
+| 1|19-01-07|[RxJS](0.RxJS)           | Introduction a ReactiveX                |                  |
 | 2|19-01-14|                         |                                         |                  |
 | 3|19-01-21|                         |                                         |                  |
 | 4|19-02-28|                         |                                         |                  |
