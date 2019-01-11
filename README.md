@@ -26,9 +26,10 @@ Introduction a la programmation
 
 # References:
 
-|Site                            | Lien                |
-|--------------------------------|---------------------|
-| .                              | https://auth0.com/  |
+|Site                            | Lien                 |
+|--------------------------------|----------------------|
+| .                              | https://auth0.com/   |
+| ReactiveX                      | http://reactivex.io/ |
 | RxJS                           | https://angular.io/guide/rx-library |
 
 # Livres
