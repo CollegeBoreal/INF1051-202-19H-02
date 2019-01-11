@@ -29,7 +29,14 @@ Introduction a la programmation
 |Site                            | Lien                |
 |--------------------------------|---------------------|
 | .                              | https://auth0.com/  |
+| RxJS                           | https://angular.io/guide/rx-library |
+
+# Livres
+
 | angular development            | https://www.manning.com/books/angular-development-with-typescript-second-edition  |
+
+
+
 
 
 
