@@ -29,8 +29,20 @@ Introduction a la programmation
 |Site                            | Lien                 |
 |--------------------------------|----------------------|
 | .                              | https://auth0.com/   |
-| ReactiveX                      | http://reactivex.io/ |
-| RxJS                           | https://angular.io/guide/rx-library |
+
+## Tester en Ligne
+
+| Livres                                                                         |  Commentaires                          |
+|--------------------------------------------------------------------------------|:---------------------------------------|
+| [https://js.do/](https://js.do/)                                               | Tester Javascript                      |
+| [https://stackblitz.com/fork/angular](https://stackblitz.com/fork/angular)     | Tester Angular                         |
+
+## RxJS
+
+| Sites                                                                          |  Commentaires                          |
+|--------------------------------------------------------------------------------|:---------------------------------------|
+| [https://www.learnrxjs.io/](https://www.learnrxjs.io/)                         | Apprendre RxJS                         |
+| [http://reactivex.io/rxjs/manual](http://reactivex.io/rxjs/manual)             | Documentation RxJS                     |
 
 # Livres
 
