@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
     this.hello();
     this.evenNumbers();
     this.vide();
+    this.anim();
   }
 
   hello() {
@@ -62,6 +63,18 @@ export class AppComponent implements OnInit {
     const subscribe = EMPTY.subscribe({
       next: () => console.log('Next'),
       complete: () => console.log('Complete!')
+    });
+  }
+
+  anim() {
+    var elem = document.querySelector('.pulse');
+    var animation = elem.animate({
+      opacity: [0.5, 1],
+      transform: ['scale(0.5)', 'scale(1)'],
+    }, {
+      direction: 'alternate',
+      duration: 500,
+      iterations: Infinity,
     });
   }
 }
