@@ -1,10 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {PokemonResult} from './pokemon-result';
-import {Pokemon} from './pokemon';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +10,6 @@ import {Pokemon} from './pokemon';
   ],
   imports: [
     BrowserModule,
-    // import HttpClientModule after BrowserModule.
     HttpClientModule
   ],
   providers: [],

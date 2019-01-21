@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {PokemonService} from './pokemon.service';
-import {flatMap, map, mergeMap} from 'rxjs/operators';
+import {map, mergeMap} from 'rxjs/operators';
 import {ConfigService} from './config.service';
 import {Config} from './config';
 import {PokemonResult} from './pokemon-result';
+import {Pokemon} from './pokemon';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,8 @@ import {PokemonResult} from './pokemon-result';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'b300098957';
-  public config: Config;
+  title = 'b300089781';
+  config: Config;
   pokemons: PokemonResult;
 
   constructor(
@@ -24,12 +25,10 @@ export class AppComponent implements OnInit {
     this.configService.getConfig()
       .subscribe((data: Config) => this.config = {
         heroesUrl: data.heroesUrl,
-        textfile:  data.textfile
+        textfile: data.textfile
       });
 
     this.pokemonService.pokemonInit()
-      .subscribe( (data: PokemonResult) => this.pokemons = data);
-
+      .subscribe((data: PokemonResult) => this.pokemons = data);
   }
-
 }
