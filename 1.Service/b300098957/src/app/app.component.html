@@ -1,3 +1,6 @@
 <div>{{config.heroesUrl}}</div>
 <div>{{config.textfile}}</div>
-
+<div>{{pokemons.count}}</div>
+<ul>
+  <li *ngFor="let pokemon of pokemons.results">{{pokemon.url}}</li>
+</ul>
