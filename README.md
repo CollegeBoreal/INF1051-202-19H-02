@@ -33,7 +33,7 @@ Introduction a la programmation
 
 ## Tester en Ligne
 
-| Livres                                                                         |  Commentaires                          |
+| Sites                                                                         |  Commentaires                          |
 |--------------------------------------------------------------------------------|:---------------------------------------|
 | [https://js.do/](https://js.do/)                                               | Tester Javascript                      |
 | [https://stackblitz.com/fork/angular](https://stackblitz.com/fork/angular)     | Tester Angular                         |
@@ -47,7 +47,9 @@ Introduction a la programmation
 
 # Livres
 
-| angular development            | https://www.manning.com/books/angular-development-with-typescript-second-edition  |
+| Livres                                                                         |  Commentaires                          |
+|--------------------------------------------------------------------------------|:---------------------------------------|
+| angular development                                                            | https://www.manning.com/books/angular-development-with-typescript-second-edition  |
 
 
 
