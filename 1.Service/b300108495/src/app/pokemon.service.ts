@@ -15,4 +15,10 @@ export class PokemonService {
   pokemonInit(): Observable<PokemonResult> {
     return this.http.get<PokemonResult>(this.pokemonUrl );
   }
+  pokemonNext(url: String): Observable<PokemonResult> {
+    return this.http.get<PokemonResult>(url);
+  }
+  pokemonPrevious(url: String): Observable<PokemonResult> {
+    return this.http.get<PokemonResult>(url);
+  }
 }
