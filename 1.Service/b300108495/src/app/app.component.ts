@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   config: Config;
   pokemons: PokemonResult ;
 
+
   constructor(
     private pokemonService: PokemonService,
     private configService: ConfigService
@@ -28,6 +29,14 @@ export class AppComponent implements OnInit {
         textfile:  data.textfile
       });
     this.pokemonService.pokemonInit()
+      .subscribe((data: PokemonResult) => this.pokemons = data);
+  }
+  onNext(): void {
+   this.pokemonService.pokemonNext(this.pokemons.next)
+     .subscribe((data: PokemonResult) => this.pokemons = data);
+  }
+  onPrevious(): void {
+    this.pokemonService.pokemonPrevious(this.pokemons.previous)
       .subscribe((data: PokemonResult) => this.pokemons = data);
   }
 

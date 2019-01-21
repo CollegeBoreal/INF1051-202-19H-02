@@ -15,4 +15,8 @@ export class PokemonService {
   pokemonInit(): Observable<PokemonResult> {
     return this.http.get<PokemonResult>(this.pokemonUrl );
   }
+
+  pokemonNext(url: string): Observable<PokemonResult> {
+    return this.http.get<PokemonResult>(url);
+  }
 }
