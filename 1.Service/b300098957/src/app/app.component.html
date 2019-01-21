@@ -1,6 +1,8 @@
 <div>{{config.heroesUrl}}</div>
 <div>{{config.textfile}}</div>
 <div>{{pokemons.count}}</div>
+<button (click)="onNext()">Next</button>
+<button (click)="onPrevious()">Previous</button>
 <ul>
   <li *ngFor="let pokemon of pokemons.results">{{pokemon.url}}</li>
 </ul>

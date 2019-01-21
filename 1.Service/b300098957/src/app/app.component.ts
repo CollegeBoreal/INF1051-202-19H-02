@@ -29,7 +29,16 @@ export class AppComponent implements OnInit {
 
     this.pokemonService.pokemonInit()
       .subscribe( (data: PokemonResult) => this.pokemons = data);
+  }
 
+  onNext(): void {
+    this.pokemonService.pokemonNext(this.pokemons.next)
+      .subscribe( (data: PokemonResult) => this.pokemons = data);
+  }
+
+  onPrevious(): void {
+    this.pokemonService.pokemonNext(this.pokemons.previous)
+      .subscribe( (data: PokemonResult) => this.pokemons = data);
   }
 
 }
