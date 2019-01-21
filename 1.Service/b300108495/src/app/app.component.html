@@ -1,6 +1,8 @@
+<button (click)="onNext()">Next!</button>
+<button (click)="onPrevious()">Previous!</button>
 
 <div>{{pokemons.count}}</div>
 <div *ngFor="let pokemon of pokemons.results">{{pokemon.url}}</div>
-<div>{{pokemons.next}}</div>
+
 
 
