@@ -17,11 +17,22 @@
 
 * frontend
 
-   - creer le projet angular
+   - creer le projet angular (300089781/300108495)
+   
+   - cree le menu principal (300089781/300108495)
+   
+   - Dashboard - 300108495
+   
+   - Manage Content - 300089781
 
 
-* backed
+* backend
 
+   - creer le projet - 300098957
+   
+   - Dashboard - 300108495
+
+   - Manage Content - 300089781
 
 
 * Deploy
