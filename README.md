@@ -30,6 +30,7 @@ Introduction a la programmation
 |--------------------------------|----------------------|
 | .                              | https://auth0.com/   |
 | Marbles                        | http://rxmarbles.com |
+| Http Interceptors              | https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8 |
 
 ## Tester en Ligne
 
