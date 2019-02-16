@@ -31,6 +31,7 @@ Introduction a la programmation
 | .                              | https://auth0.com/   |
 | Marbles                        | http://rxmarbles.com |
 | Http Interceptors              | [angular-authentication-using-the-http-client-and-http-interceptors](https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8) |
+| JWT Angular 7                  | https://github.com/auth0/angular2-jwt |
 
 ## Tester en Ligne
 
