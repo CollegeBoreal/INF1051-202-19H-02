@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 import {
   NbAuthComponent,
   NbLoginComponent,
@@ -10,6 +10,7 @@ import {
 } from '@nebular/auth';
 
 const routes: Routes = [
+  // { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule', canLoad: [AuthGuardService]},
   {
     path: 'auth',
     component: NbAuthComponent,
@@ -40,7 +41,13 @@ const routes: Routes = [
       },
     ],
   },
+  { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'auth/login' },
 ];
+
+const config: ExtraOptions = {
+  useHash: true,
+};
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
