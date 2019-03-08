@@ -14,3 +14,8 @@ $ npm install --save @nebular/theme @angular/cdk @angular/animations
 $ npm i typescript@3.1.6 --save-dev --save-exact
 ```
 
+## Error: Cannot find module 'node-sass'
+
+```
+$ npm i node-sass@4.8.1
+```
