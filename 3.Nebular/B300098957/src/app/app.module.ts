@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http';
-import {NbAuthModule, NbPasswordAuthStrategy} from '@nebular/auth';
-import {NbThemeModule} from '@nebular/theme';
+import { HttpClientModule } from '@angular/common/http';
+import { NbAuthModule, NbPasswordAuthStrategy} from '@nebular/auth';
+import { NbLayoutModule, NbThemeModule, NbUserModule } from '@nebular/theme';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,8 @@ import {NbThemeModule} from '@nebular/theme';
       ],
       forms: {},
     }),
+    NbLayoutModule,
+    NbUserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
