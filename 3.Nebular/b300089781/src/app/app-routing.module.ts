@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {NbPasswordAuthStrategy, NbAuthModule, NbResetPasswordComponent, NbLogoutComponent, NbRegisterComponent,
-  NbLoginComponent,
+import {
   NbAuthComponent,
-  NbRequestPasswordComponent} from '@nebular/auth';
+  NbLoginComponent,
+  NbLogoutComponent,
+  NbRegisterComponent,
+  NbRequestPasswordComponent,
+  NbResetPasswordComponent
+} from '@nebular/auth';
 
 const routes: Routes = [
   {
@@ -36,20 +40,10 @@ const routes: Routes = [
       },
     ],
   },
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
-    NbAuthModule.forRoot({
-      strategies: [
-        NbPasswordAuthStrategy.setup({
-          name: 'email',
-        }),
-      ],
-      forms: {},
-    }),
-  ],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
