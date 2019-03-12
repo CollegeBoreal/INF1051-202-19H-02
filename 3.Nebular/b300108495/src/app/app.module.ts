@@ -7,10 +7,23 @@ import {HttpClientModule} from '@angular/common/http';
 import { NbPasswordAuthStrategy, NbAuthModule } from '@nebular/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { CrisisListComponent } from './crisis-list/crisis-list.component';
+import { HeroListComponent } from './hero-list/hero-list.component';
+import {Routes} from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+const appRoutes: Routes = [
+  { path: 'crisis-center', component: CrisisListComponent },
+  { path: 'heroes', component: HeroListComponent },
+  { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CrisisListComponent,
+    HeroListComponent,
+    PageNotFoundComponent
   ],
   imports: [
     NbAuthModule.forRoot({
