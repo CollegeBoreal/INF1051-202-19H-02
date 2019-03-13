@@ -30,6 +30,8 @@ $ ng serve --proxy-config proxy.config.json
 
 Interceptors:
 
+https://stackoverflow.com/questions/51447545/angular-6-auth-token-interceptor-not-adding-headers
+
 https://github.com/akveo/ngx-admin/issues/1375
 
 https://github.com/akveo/nebular/blob/master/src/framework/auth/services/interceptors/jwt-interceptor.ts
