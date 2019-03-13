@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { AuthGuard } from './auth/auth.guard';
 import {
   NbAuthComponent,
   NbLoginComponent,
@@ -8,8 +10,10 @@ import {
   NbRequestPasswordComponent,
   NbResetPasswordComponent
 } from '@nebular/auth';
+import {DashboardComponent} from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
+  { path: 'pages', loadChildren: './pages/pages.module#PagesModule', canLoad: [AuthGuard]},
   {
     path: 'auth',
     component: NbAuthComponent,
@@ -40,6 +44,9 @@ const routes: Routes = [
       },
     ],
   },
+  { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'auth/login' },
+
 ];
 
 @NgModule({
