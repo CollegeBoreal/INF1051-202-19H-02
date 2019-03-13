@@ -7,6 +7,7 @@ https://akveo.github.io/nebular/docs/auth/introduction
 $ npm install --save @nebular/theme @angular/cdk @angular/animations
 ```
 
+https://akveo.github.io/nebular/docs/guides/backend-integration
 
 proxy.config.json
 
@@ -28,6 +29,8 @@ $ ng serve --proxy-config proxy.config.json
 ## References:
 
 Interceptors:
+
+https://stackoverflow.com/questions/51447545/angular-6-auth-token-interceptor-not-adding-headers
 
 https://github.com/akveo/ngx-admin/issues/1375
 
