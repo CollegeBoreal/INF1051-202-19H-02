@@ -7,12 +7,11 @@ import {HTTP_INTERCEPTORS, HttpClientModule, HttpResponse} from '@angular/common
 import {
   NB_AUTH_INTERCEPTOR_HEADER, NB_AUTH_TOKEN_INTERCEPTOR_FILTER,
   NbAuthJWTToken,
-  NbAuthModule,
+  NbAuthModule, NbAuthSimpleInterceptor,
   NbPasswordAuthStrategy
 } from '@nebular/auth';
 import { NbLayoutModule, NbThemeModule, NbUserModule } from '@nebular/theme';
 import { HeaderComponent } from './header/header.component';
-import {AuthTokenInterceptor} from './AuthTokenInterceptor';
 
 const NB_THEME_MODULES = [
   NbLayoutModule,
@@ -48,8 +47,8 @@ const NB_AUTH_MODULES = [
     NB_THEME_MODULES
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true },
-    { provide: NB_AUTH_TOKEN_INTERCEPTOR_FILTER, useValue: (req) => { return false; } }
+    { provide: HTTP_INTERCEPTORS, useClass: NbAuthSimpleInterceptor, multi: true },
+    { provide: NB_AUTH_INTERCEPTOR_HEADER, useValue: 'X-Auth-Token' }
   ],
   bootstrap: [AppComponent]
 })
