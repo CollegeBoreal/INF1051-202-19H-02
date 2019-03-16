@@ -1,26 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {HTTP_INTERCEPTORS, HttpClientModule, HttpResponse} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {
-  NB_AUTH_INTERCEPTOR_HEADER, NB_AUTH_TOKEN_INTERCEPTOR_FILTER,
+  NB_AUTH_INTERCEPTOR_HEADER,
   NbAuthJWTToken,
   NbAuthModule, NbAuthSimpleInterceptor,
   NbPasswordAuthStrategy
 } from '@nebular/auth';
-import { NbLayoutModule, NbThemeModule, NbUserModule } from '@nebular/theme';
-import { HeaderComponent } from './header/header.component';
-import {AuthGuard} from './auth/auth.guard';
+import { NbThemeModule } from '@nebular/theme';
 
-const NB_THEME_MODULES = [
-  NbLayoutModule,
-  NbUserModule,
-  NbThemeModule.forRoot()
-];
-
-const NB_AUTH_MODULES = [
+const NB_AUTH_MODULE = [
   NbAuthModule.forRoot({
     strategies: [
       NbPasswordAuthStrategy.setup({
@@ -35,21 +26,24 @@ const NB_AUTH_MODULES = [
   }),
 ];
 
+const NB_AUTH_PROVIDERS = [
+  { provide: HTTP_INTERCEPTORS, useClass: NbAuthSimpleInterceptor, multi: true },
+  { provide: NB_AUTH_INTERCEPTOR_HEADER, useValue: 'X-Auth-Token' }
+];
+
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NB_AUTH_MODULES,
-    NB_THEME_MODULES
+    NbThemeModule.forRoot(),
+    NB_AUTH_MODULE
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: NbAuthSimpleInterceptor, multi: true },
-    { provide: NB_AUTH_INTERCEPTOR_HEADER, useValue: 'X-Auth-Token' }
+    NB_AUTH_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })
