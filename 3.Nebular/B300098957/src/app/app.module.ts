@@ -12,6 +12,7 @@ import {
 } from '@nebular/auth';
 import { NbLayoutModule, NbThemeModule, NbUserModule } from '@nebular/theme';
 import { HeaderComponent } from './header/header.component';
+import {AuthGuard} from './auth/auth.guard';
 
 const NB_THEME_MODULES = [
   NbLayoutModule,
