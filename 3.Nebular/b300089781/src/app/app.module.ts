@@ -3,16 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http';
-import {NbAuthJWTToken, NbAuthModule, NbPasswordAuthStrategy} from '@nebular/auth';
-import {NbThemeModule} from '@nebular/theme';
-import {PagesModule} from './pages/pages.module';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {NB_AUTH_INTERCEPTOR_HEADER, NbAuthJWTToken, NbAuthModule, NbAuthSimpleInterceptor, NbPasswordAuthStrategy} from '@nebular/auth';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 
-const NB_THEME_MODULES = [
-  NbThemeModule.forRoot()
-];
-
-const NB_AUTH_MODULES = [
+const NB_AUTH_MODULE = [
   NbAuthModule.forRoot({
     strategies: [
       NbPasswordAuthStrategy.setup({
@@ -27,6 +23,11 @@ const NB_AUTH_MODULES = [
   }),
 ];
 
+const NB_AUTH_PROVIDERS = [
+  { provide: HTTP_INTERCEPTORS, useClass: NbAuthSimpleInterceptor, multi: true },
+  { provide: NB_AUTH_INTERCEPTOR_HEADER, useValue: 'X-Auth-Token' }
+];
+
 @NgModule({
   declarations: [
     AppComponent
@@ -35,11 +36,12 @@ const NB_AUTH_MODULES = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NB_THEME_MODULES,
-    NB_AUTH_MODULES,
-    PagesModule
+    NB_AUTH_MODULE,
+    BrowserAnimationsModule,
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbLayoutModule
   ],
-  providers: [],
+  providers: [NB_AUTH_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

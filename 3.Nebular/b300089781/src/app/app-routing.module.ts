@@ -1,19 +1,15 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { AuthGuard } from './auth/auth.guard';
+import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 import {
   NbAuthComponent,
   NbLoginComponent,
   NbLogoutComponent,
-  NbRegisterComponent,
-  NbRequestPasswordComponent,
-  NbResetPasswordComponent
+  NbRegisterComponent
 } from '@nebular/auth';
-import {DashboardComponent} from './pages/dashboard/dashboard.component';
+import {AuthGuard} from './@auth/auth.guard';
 
 const routes: Routes = [
-  { path: 'pages', loadChildren: './pages/pages.module#PagesModule', canLoad: [AuthGuard]},
+  { path: 'pages', loadChildren: './pages/pages.module#PagesModule', canActivate: [AuthGuard]},
   {
     path: 'auth',
     component: NbAuthComponent,
@@ -33,24 +29,20 @@ const routes: Routes = [
       {
         path: 'logout',
         component: NbLogoutComponent,
-      },
-      {
-        path: 'request-password',
-        component: NbRequestPasswordComponent,
-      },
-      {
-        path: 'reset-password',
-        component: NbResetPasswordComponent,
-      },
+      }
     ],
   },
-  { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
-  { path: '**', redirectTo: 'auth/login' },
-
+  { path: '', redirectTo: 'pages/dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: 'pages/dashboard' },
 ];
 
+// https://angular.io/guide/router#appendix-locationstrategy-and-browser-url-styles
+const config: ExtraOptions = {
+  useHash: true,
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes, config )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
