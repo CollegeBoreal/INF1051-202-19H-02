@@ -16,7 +16,7 @@ const routes: Routes = [
         ],
       },
       {
-        path: 'color',
+        path: 'colors',
         children: [
           { path: '', component: PagesColorsComponent }
         ],

@@ -8,8 +8,8 @@ import {HttpClient} from '@angular/common/http';
     <h2>My favorite color is: {{colors}}</h2>
     <p>Colors:</p>
     <ul>
-      <li *ngFor="color">
-        {{color.name}}
+      <li *ngFor = "let color of colors">
+        {{color}}
       </li>
     </ul>
   `,
