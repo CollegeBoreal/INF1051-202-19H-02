@@ -4,19 +4,21 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-pages-colors',
   template: `
-    <p>
-      pages-colors works!
-    </p>
+    <h1>{{title}}</h1>
+    <h2>My favorite color is: {{colors}}</h2>
+    <p>Colors:</p>
+    <ul>
+      <li *ngFor="color">
+        {{color.name}}
+      </li>
+    </ul>
   `,
   styles: []
 })
 export class PagesColorsComponent implements OnInit {
 
   // TODO this Class should go in a model
-  Password = {
-    result: String
-  };
-
+  colors = [];
   constructor(private injector: Injector) {
   }
 
@@ -24,14 +26,14 @@ export class PagesColorsComponent implements OnInit {
     console.log('populate data');
     this.getData()
       .subscribe(
-        (data: any) => this.Password = data
+        (data: any) => this.colors = data
         , (err: any) => console.error('too bad' + err)
       );
   }
 
   // TODO this function should go in a service
   getData() {
-    return this.httpService.get<string>('/api/badPassword');
+    return this.httpService.get<string>('/api/colors');
   }
 
   // TODO this function should go in a service along with the above function
