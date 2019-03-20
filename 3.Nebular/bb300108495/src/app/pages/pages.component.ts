@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
     <nav>
       <a routerLink="./dashboard" routerLinkActive="active"
          [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+    <br>
+      <a routerLink="./colors" routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }">Colors</a>
     </nav>
     <router-outlet></router-outlet>
   `,
