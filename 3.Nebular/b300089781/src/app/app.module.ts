@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {NB_AUTH_INTERCEPTOR_HEADER, NbAuthJWTToken, NbAuthModule, NbAuthSimpleInterceptor, NbPasswordAuthStrategy} from '@nebular/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import {CoreModule} from './@core/core.module';
+import { NameEditorComponent } from './name-editor/name-editor.component';
 
 const NB_AUTH_MODULE = [
   NbAuthModule.forRoot({
@@ -30,7 +33,8 @@ const NB_AUTH_PROVIDERS = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NameEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,10 @@ const NB_AUTH_PROVIDERS = [
     NB_AUTH_MODULE,
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'default' }),
-    NbLayoutModule
+    NbLayoutModule,
+    CoreModule.forRoot(),
+    ReactiveFormsModule
+
   ],
   providers: [NB_AUTH_PROVIDERS],
   bootstrap: [AppComponent]
