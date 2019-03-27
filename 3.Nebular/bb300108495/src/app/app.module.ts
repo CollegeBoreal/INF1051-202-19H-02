@@ -38,8 +38,6 @@ const NB_AUTH_PROVIDERS = [
 @NgModule({
   declarations: [
     AppComponent,
-    NameEditorComponent,
-    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,
