@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import {CoreModule} from './@core/core.module';
 import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 const NB_AUTH_MODULE = [
   NbAuthModule.forRoot({
@@ -34,7 +35,8 @@ const NB_AUTH_PROVIDERS = [
 @NgModule({
   declarations: [
     AppComponent,
-    NameEditorComponent
+    NameEditorComponent,
+    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,
