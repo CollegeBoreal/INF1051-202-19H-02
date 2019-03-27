@@ -1,0 +1,6 @@
+<h1 class="title">Angular Router</h1>
+<nav>
+  <a routerLink="/admin" routerLinkActive="active">Admin</a>
+</nav>
+<div [@routeAnimation]="getAnimationData(routerOutlet)">
+  <router-outlet></router-outlet>
