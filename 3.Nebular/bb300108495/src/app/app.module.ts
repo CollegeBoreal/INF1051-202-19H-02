@@ -13,9 +13,7 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import {CoreModule} from './@core/core.module';
-import {ReactiveFormsModule} from '@angular/forms';
-import { NameEditorComponent } from './name-editor/name-editor.component';
-import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+
 
 const NB_AUTH_MODULE = [
   NbAuthModule.forRoot({
@@ -40,8 +38,6 @@ const NB_AUTH_PROVIDERS = [
 @NgModule({
   declarations: [
     AppComponent,
-    NameEditorComponent,
-    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +48,6 @@ const NB_AUTH_PROVIDERS = [
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
     CoreModule.forRoot(),
-    ReactiveFormsModule,
   ],
   providers: [
     NB_AUTH_PROVIDERS,
