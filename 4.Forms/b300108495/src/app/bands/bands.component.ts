@@ -12,5 +12,20 @@ export class BandsComponent {
   updateName() {
     this.name.setValue('Zafaa');
   }
+  
+  
+  Bands = [];
+
+  constructor(private bandsListService: BandsListService) {
+  }
+
+  ngOnInit() {
+    console.log('populate data');
+    this.colorsBandService.getData()
+      .subscribe(
+        (data: any) => this.Bands = data
+        , (err: any) => console.error('too bad' + err)
+      );
+  }
 
 }
