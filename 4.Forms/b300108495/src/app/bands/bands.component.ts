@@ -20,20 +20,5 @@ export class BandsComponent implements OnInit {
         , (err: any) => console.error('too bad' + err)
       );
   }
-  
-  
-  Bands = [];
-
-  constructor(private bandsListService: BandsListService) {
-  }
-
-  ngOnInit() {
-    console.log('populate data');
-    this.colorsBandService.getData()
-      .subscribe(
-        (data: any) => this.Bands = data
-        , (err: any) => console.error('too bad' + err)
-      );
-  }
 
 }
