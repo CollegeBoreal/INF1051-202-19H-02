@@ -1,16 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {BandsListService} from './bands-list.service';
 
 @Component({
   selector: 'app-bands',
   templateUrl: './bands.component.html',
   styleUrls: ['./bands.component.scss']
 })
-export class BandsComponent {
+export class BandsComponent implements OnInit {
+  Bands = [];
 
-  name = new FormControl('');
-  updateName() {
-    this.name.setValue('Zafaa');
+  constructor(private bandsListService: BandsListService) {
+  }
+
+  ngOnInit() {
+    console.log('populate data');
+    this.bandsListService.getData()
+      .subscribe(
+        (data: any) => this.Bands = data
+        , (err: any) => console.error('too bad' + err)
+      );
   }
 
 }
