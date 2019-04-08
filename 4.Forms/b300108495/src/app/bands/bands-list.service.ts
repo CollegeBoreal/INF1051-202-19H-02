@@ -10,4 +10,9 @@ export class BandsListService {
   getData() {
     return this.httpClient.get<string>('/api/bands');
   }
+  setData( band: String) {
+    return this
+      .httpClient
+      .post<string>('/api/bands/create', band)
+  }
 }
