@@ -9,12 +9,13 @@ import {FormControl} from '@angular/forms';
 })
 
 export class BandsComponent implements OnInit {
+  Bands = [];
   name = new FormControl('');
   updateName() {
+    console.log(this.name.value);
     this.name.setValue('Safaa Zaoui');
     this.bandsListService.setData(this.name.value);
   }
-  Bands = [];
 
   constructor(private bandsListService: BandsListService) {
   }
