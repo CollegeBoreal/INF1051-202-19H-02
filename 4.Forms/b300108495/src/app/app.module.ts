@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { BandsComponent } from './bands/bands.component';
+import {HttpClient} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BandsComponent } from './bands/bands.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClient
   ],
   providers: [],
   bootstrap: [AppComponent]
