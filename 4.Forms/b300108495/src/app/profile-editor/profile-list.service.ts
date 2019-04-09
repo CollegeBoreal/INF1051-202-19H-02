@@ -4,15 +4,15 @@ import {HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class BandsListService {
+export class ProfileListService {
 
   constructor(private httpClient: HttpClient) { }
   getData() {
-    return this.httpClient.get<string>('/api/bands');
+    return this.httpClient.get<string>('/api/profile');
   }
-  setData( band: String) {
+  setData( profile: String) {
     return this
       .httpClient
-      .post<string>('/api/bands/create', band);
+      .post<string>('/api/profile/create', profile);
   }
 }

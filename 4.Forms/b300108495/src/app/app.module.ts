@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { BandsComponent } from './bands/bands.component';
 import {HttpClient} from '@angular/common/http';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BandsComponent
+    BandsComponent,
+    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,
