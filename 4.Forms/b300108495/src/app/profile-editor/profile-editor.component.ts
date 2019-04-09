@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import {ProfileListService} from './profile-list.service';
 
@@ -6,9 +6,11 @@ import {ProfileListService} from './profile-list.service';
 @Component({
   selector: 'app-profile-editor',
   templateUrl: './profile-editor.component.html',
-  styleUrls: ['./profile-editor.component.css']
+  styleUrls: ['./profile-editor.component.scss']
 })
-export class ProfileEditorComponent {
+
+
+export class ProfileEditorComponent implements OnInit {
   Profile = [];
   profileForm = new FormGroup({
     firstName: new FormControl(''),
@@ -19,7 +21,7 @@ export class ProfileEditorComponent {
       state: new FormControl(''),
       zip: new FormControl('')
     }),
-  }
+  });
   constructor(private profileListService: ProfileListService) {
   }
   updateProfile() {
