@@ -11,8 +11,8 @@
   </label>
 
 </form>
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()"></form>
-  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
   <div formGroupName="address">
     <h3>Address</h3>
 
@@ -39,3 +39,4 @@
       <button (click)="updateProfile()">Update Profile</button>
     </p>
   </div>
+</form>
