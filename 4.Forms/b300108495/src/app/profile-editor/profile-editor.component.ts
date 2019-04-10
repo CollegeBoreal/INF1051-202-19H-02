@@ -30,10 +30,11 @@ export class ProfileEditorComponent implements OnInit {
       address: {
         street: '123 Drew Street'
       }
-    })
+    });
   }
   onSubmit() {
     console.warn(this.profileForm.value);
+    this.profileListService.setData(this.profileForm.value);
   }
   ngOnInit() {
     console.log('populate data');
