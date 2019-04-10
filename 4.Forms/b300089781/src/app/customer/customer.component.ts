@@ -12,6 +12,7 @@ export class CustomerComponent implements OnInit {
   Customer = [];
   name = new FormControl('');
   updateName() {
+    console.log(this.name.value)
     this.name.setValue('Moi');
     this.customerListService.setData(this.name.value);
   }
