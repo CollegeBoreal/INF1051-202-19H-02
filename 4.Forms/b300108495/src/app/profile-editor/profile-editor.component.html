@@ -11,8 +11,9 @@
   </label>
 
 </form>
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()"></form>>
-<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+
 <div formGroupName="address">
   <h3>Address</h3>
 
@@ -39,5 +40,4 @@
 <p>
   <button (click)="updateProfile()">Update Profile</button>
 </p>
-
-<app-profile-editor></app-profile-editor>
+</form>

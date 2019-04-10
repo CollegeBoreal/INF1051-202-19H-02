@@ -43,5 +43,5 @@ export class ProfileEditorComponent implements OnInit {
         (data: any) => this.Profile = data
         , (err: any) => console.error('too bad' + err)
       );
-  };
+  }
 }

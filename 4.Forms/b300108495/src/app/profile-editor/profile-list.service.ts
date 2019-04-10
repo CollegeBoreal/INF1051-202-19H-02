@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {ProfileList} from './profile-list';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class ProfileListService {
   getData() {
     return this.httpClient.get<string>('/api/profile');
   }
-  setData( profile: String) {
+  setData( profile: ProfileList) {
     return this
       .httpClient
       .post<string>('/api/profile/create', profile);

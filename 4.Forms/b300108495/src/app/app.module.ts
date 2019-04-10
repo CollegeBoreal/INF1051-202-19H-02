@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { BandsComponent } from './bands/bands.component';
-import {HttpClient} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClient
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
