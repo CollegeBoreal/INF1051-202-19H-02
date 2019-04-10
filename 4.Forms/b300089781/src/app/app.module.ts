@@ -7,12 +7,14 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import { HttpClientModule} from '@angular/common/http';
 import { CustomerComponent } from './customer/customer.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistsComponent,
-    CustomerComponent
+    CustomerComponent,
+    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,
