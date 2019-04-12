@@ -19,22 +19,24 @@ https://docs.docker.com/compose/wordpress/
 | wp_usermeta           |
 | wp_users              |
 
-| Plugin Tables: Essential Grid |
+Plugin Tables: 
+
+| Essential Grid                |
 |-------------------------------|
 | wp_eg_grids                   |
 | wp_eg_item_elements           |
 | wp_eg_item_skins              |
 | wp_eg_navigation_skins        |
 
-| Plugin Tables: EWWW Image Optimizer | 
+| EWWW Image Optimizer                | 
 |-------------------------------------|
-| wp_ewwwio_images Table              |
+| wp_ewwwio_images                    |
 
-| Plugin Tables: IQ Block Country     | 
+| IQ Block Country                    | 
 |-------------------------------------|
 | wp_iqblock_logging                  |
 
-| Plugin Tables; Responsive Revolution Slider |
+| Responsive Revolution Slider                |
 |---------------------------------------------|
 | wp_revslider_css                            |
 | wp_revslider_layer_animations               |
@@ -43,7 +45,7 @@ https://docs.docker.com/compose/wordpress/
 | wp_revslider_slides                         |
 | wp_revslider_static_slides                  |
 
-| Plugin Tables: wp125 Ad Management          |
+| wp125 Add Management                        |
 |---------------------------------------------|
 | wp_wp125_ads                                |
 
