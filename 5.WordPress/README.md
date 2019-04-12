@@ -7,7 +7,7 @@ https://docs.docker.com/compose/wordpress/
 
 ## Étudier les plugins suivants
 
-* Essential Grid
+* [Essential Grid](https://www.themepunch.com/portfolio/essential-grid-wordpress-plugin/)
 
 * EWWW Image Optimizer
 
