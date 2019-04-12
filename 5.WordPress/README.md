@@ -13,7 +13,7 @@ https://docs.docker.com/compose/wordpress/
 
 * IQ Block Country
 
-* Responsive Revolution Slider
+* [Responsive Revolution Slider](https://revolution.themepunch.com)
 
 * wp125 Add Management
 
