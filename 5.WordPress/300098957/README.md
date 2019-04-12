@@ -20,7 +20,6 @@ https://docs.docker.com/compose/wordpress/
 | wp_usermeta                   |
 | wp_users                      |
 
-|-----------------------|
 | Tables_in_wordpress   |
 |-----------------------|
 | wp_commentmeta        |
@@ -35,7 +34,6 @@ https://docs.docker.com/compose/wordpress/
 | wp_terms              |
 | wp_usermeta           |
 | wp_users              |
-|-----------------------|
 
 | Plugin Tables: Essential Grid |
 |-------------------------------|
