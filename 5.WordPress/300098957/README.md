@@ -4,22 +4,6 @@
 
 https://docs.docker.com/compose/wordpress/
 
-
-| WordPress Tables:             |
-|-------------------------------|
-| wp_commentmeta                |
-| wp_comments                   |
-| wp_links                      |
-| wp_options                    |
-| wp_postmeta                   |
-| wp_posts                      |
-| wp_term_relationships         |
-| wp_term_taxonomy              |
-| wp_termmeta                   |
-| wp_terms                      |
-| wp_usermeta                   |
-| wp_users                      |
-
 | Tables_in_wordpress   |
 |-----------------------|
 | wp_commentmeta        |
