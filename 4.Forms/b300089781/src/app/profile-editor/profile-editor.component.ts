@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import {ArtistsListService} from '../artists-list.service';
 import {ProfileEditorService} from './profile-editor.service';
 
 @Component({
@@ -23,7 +22,7 @@ export class ProfileEditorComponent {
   onSubmit() {
     // TODO: Use EventEmitter with form value
     this.profileEditorService.setData(this.profileForm.value);
-    console.warn(this.profileForm.value);
+    console.log(this.profileForm.value);
   }
   updateProfile() {
     this.profileForm.patchValue({
