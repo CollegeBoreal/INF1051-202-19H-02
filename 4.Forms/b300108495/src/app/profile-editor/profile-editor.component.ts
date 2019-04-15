@@ -33,7 +33,7 @@ export class ProfileEditorComponent implements OnInit {
     });
   }
   onSubmit() {
-    console.warn(this.profileForm.value);
+    console.log(this.profileForm.value + ' Safaa');
     this.profileListService.setData(this.profileForm.value);
   }
   ngOnInit() {
